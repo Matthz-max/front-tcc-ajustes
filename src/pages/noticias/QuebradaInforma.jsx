@@ -163,7 +163,7 @@ export default function QuebradaInforma() {
       </div>
 
       {/* Notícias */}
-      <h2 className=" text-2xl font-semibold mb-6">Seleção de notícias</h2>
+<h2 className="text-4xl font-semibold mb-10 w-max mx-auto text-center">Seleções de doações</h2>
       <div className="space-y-6">
         {noticias.map((n) => (
           <Link to={`/noticia/${n.id}`} key={n.id} className="block px-20">

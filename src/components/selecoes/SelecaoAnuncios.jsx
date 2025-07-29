@@ -8,7 +8,7 @@ export default function SelecaoAnuncios() {
 
   return (
     <div className="mt-20 mb-24">
-      <h2 className="text-2xl font-semibold mb-6">Seleções de anúncios</h2>
+      <h2 className="text-4xl font-semibold mb-10 w-max mx-auto text-center">Seleções de anúncios</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 justify-items-center">
         {ultimosProdutos.map((anuncio) => (
           <div
