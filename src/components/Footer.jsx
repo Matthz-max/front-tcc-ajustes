@@ -15,31 +15,48 @@ export default function Footer() {
         {/* Páginas */}
         <div>
           <h3 className="text-sm font-bold mb-2 flex items-center gap-1">
-            <span className="w-2 h-4 rounded-md" style={{ backgroundColor: corPrincipal }}></span> 
+            <span
+              className="w-2 h-4 rounded-md"
+              style={{ backgroundColor: corPrincipal }}
+            ></span>
             Páginas
           </h3>
           <ul className="text-sm text-gray-500 space-y-1 ">
-            <li className="hover:text-red-500 transition duration-200"><Link to="/quebrada-informa">Quebrada informa</Link></li>
-            <li className="hover:text-red-500 transition duration-200"><Link to="/doacoes">Mão amiga</Link></li>
-            <li className="hover:text-red-500 transition duration-200"><Link to="/vendas">Achadinhos</Link></li>
-            <li className="hover:text-red-500 transition duration-200"><Link to="/empregos">Corre certo</Link></li>
-            <li className="hover:text-red-500 transition duration-200"><Link to="/sobre">Sobre nós</Link></li>
+            <li className="hover:text-red-500 transition duration-200">
+              <Link to="/quebrada-informa">Quebrada informa</Link>
+            </li>
+            <li className="hover:text-red-500 transition duration-200">
+              <Link to="/doacoes">Mão amiga</Link>
+            </li>
+            <li className="hover:text-red-500 transition duration-200">
+              <Link to="/vendas">Achadinhos</Link>
+            </li>
+            <li className="hover:text-red-500 transition duration-200">
+              <Link to="/empregos">Corre certo</Link>
+            </li>
+            <li className="hover:text-red-500 transition duration-200">
+              <Link to="/sobre">Sobre nós</Link>
+            </li>
           </ul>
         </div>
 
         {/* Redes Sociais */}
         <div>
           <h3 className="text-sm font-bold mb-2 flex items-center gap-1">
-            <span className="w-2 h-4 rounded-md" style={{ backgroundColor: corPrincipal }}></span>
+            <span
+              className="w-2 h-4 rounded-md"
+              style={{ backgroundColor: corPrincipal }}
+            ></span>
             Redes Sociais
           </h3>
           <a
             href="https://www.instagram.com"
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center justify-center w-10 h-10 text-white rounded-full"
+            className="inline-flex items-center justify-center w-10 h-10 text-white rounded-full hover:scale-105 cursor-pointer"
             style={{
-              background: "radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%)"
+              background:
+                "radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%)",
             }}
           >
             <FaInstagram size={20} />
@@ -49,7 +66,10 @@ export default function Footer() {
         {/* E-mail com link mailto */}
         <div>
           <h3 className="text-sm font-bold mb-2 flex items-center gap-1">
-            <span className="w-2 h-4 rounded-md" style={{ backgroundColor: corPrincipal }}></span> 
+            <span
+              className="w-2 h-4 rounded-md"
+              style={{ backgroundColor: corPrincipal }}
+            ></span>
             Reposte Algum Erro Neste Email:
           </h3>
           <a

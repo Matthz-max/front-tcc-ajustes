@@ -61,7 +61,9 @@ export default function CarrosselVendas() {
                 >
                   Por R${produto.preco}
                 </span>
-                <h2 className="text-4xl font-bold text-gray-900">{produto.titulo}</h2>
+                <h2 className="text-4xl font-bold text-gray-900">
+                  {produto.titulo}
+                </h2>
                 <p className="text-gray-600 text-lg font-medium">
                   {produto.descricao}
                 </p>

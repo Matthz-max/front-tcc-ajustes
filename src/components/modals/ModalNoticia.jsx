@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { FaTimes } from "react-icons/fa";
 import { useRegiao } from "../../contexts/RegionContext"; // Para aplicar a cor da região
 import { regionColors } from "../../utils/regionColors";
-import './ModalNoticia.css'
+import "./ModalNoticia.css";
 
 export default function ModalAdicionar({ modalAberto, setModalAberto }) {
   const [titulo, setTitulo] = useState("");
@@ -56,7 +56,7 @@ export default function ModalAdicionar({ modalAberto, setModalAberto }) {
           style={{
             border: `2px solid ${corSecundaria}`,
             maxHeight: "70vh",
-            overflowY: "auto",  
+            overflowY: "auto",
           }}
         >
           {/* Botão de fechar */}

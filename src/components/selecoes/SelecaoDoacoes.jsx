@@ -7,14 +7,16 @@ export default function SelecaoDoacoes() {
   const navigate = useNavigate();
 
   return (
-    <div className="mt-20 mb-24">
-      <h2 className="text-2xl font-semibold mb-6">Seleções de doações</h2>
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+    <div className="w-full mt-20 mb-24">
+      <h2 className="text-2xl font-semibold mb-6 text-center">
+        Seleções de doações
+      </h2>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 justify-items-center">
         {ultimasDoacoes.map((doacao) => (
           <div
             key={doacao.id}
             onClick={() => navigate("/doacao", { state: doacao })}
-            className="bg-[#F4F5F7] hover:shadow-lg transition-transform duration-300 hover:scale-105 cursor-pointer w-[240px] h-[370px]"
+            className="bg-[#F4F5F7] hover:shadow-lg transition-all duration-600 hover:scale-105 cursor-pointer w-[240px] h-[370px]"
           >
             <img
               src={doacao.imagem}

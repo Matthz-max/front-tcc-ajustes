@@ -45,8 +45,14 @@ export default function SobreNos() {
       <div className="w-full max-w-5xl mx-auto bg-white shadow-md relative">
         <div className="flex h-4">
           <div className="w-1/6"></div>
-          <div className="w-4/6" style={{ backgroundColor: corPrincipal }}></div>
-          <div className="w-2/6" style={{ backgroundColor: corSecundaria }}></div>
+          <div
+            className="w-4/6"
+            style={{ backgroundColor: corPrincipal }}
+          ></div>
+          <div
+            className="w-2/6"
+            style={{ backgroundColor: corSecundaria }}
+          ></div>
         </div>
 
         {/* Texto explicativo */}
@@ -78,42 +84,38 @@ export default function SobreNos() {
       {/* Funcionalidades */}
       <section
         id="funcionalidades"
-        className="bg-white py-16 px-4 sm:px-6 md:px-12 xl:px-28"
+        className="bg-white py-16 px-4 sm:px-6 md:px-12 xl:px-28 "
       >
         <h2 className="text-center text-3xl font-fraunces font-semibold mb-12">
           Funcionalidades
         </h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-screen-xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-screen-xl mx-auto ">
           {[
             {
               icon: "📋",
               title: "Quebrada Informa",
-              desc:
-                "Espaço de jornalismo comunitário: aqui publicamos fatos e histórias locais, greves, locais com trânsito e reportagens que impactam diretamente a vida da nossa comunidade.",
+              desc: "Espaço de jornalismo comunitário: aqui publicamos fatos e histórias locais, greves, locais com trânsito e reportagens que impactam diretamente a vida da nossa comunidade.",
             },
             {
               icon: "🤝",
               title: "Mão Amiga",
-              desc:
-                "Área de solidariedade e doações: ache e ofereça itens em bom estado. Roupas, calçados, brinquedos e utensílios domésticos ganham destaque aqui, incentivando o desapego consciente.",
+              desc: "Área de solidariedade e doações: ache e ofereça itens em bom estado. Roupas, calçados, brinquedos e utensílios domésticos ganham destaque aqui, incentivando o desapego consciente.",
             },
             {
               icon: "🛍️",
               title: "Achadinhos",
-              desc:
-                "Loja online: onde vendedores e empreendedores periféricos expõem seus produtos a preços acessíveis. Artesanato, moda, alimentos e serviços. Tudo facilitar a busca e fortalecer a economia da quebrada.",
+              desc: "Loja online: onde vendedores e empreendedores periféricos expõem seus produtos a preços acessíveis. Artesanato, moda, alimentos e serviços. Tudo facilitar a busca e fortalecer a economia da quebrada.",
             },
             {
               icon: "📢",
               title: "Corre Certo",
-              desc:
-                "Painel de oportunidades: seção dedicada a vagas de emprego, bolsas de estudo e cursos. Cada anúncio é verificado e descrito de forma direta, para que você encontre a chance certa de crescer sem perder tempo.",
+              desc: "Painel de oportunidades: seção dedicada a vagas de emprego, bolsas de estudo e cursos. Cada anúncio é verificado e descrito de forma direta, para que você encontre a chance certa de crescer sem perder tempo.",
             },
           ].map((item, i) => (
             <div
               key={i}
-              className="border shadow-md p-6 bg-white relative rounded-lg"
+              className="border shadow-md p-6 bg-white relative rounded-lg transtion duration-200 hover:scale-105 cursor-pointer"
             >
               <div
                 className="h-1 w-full absolute top-0 left-0 rounded-t"

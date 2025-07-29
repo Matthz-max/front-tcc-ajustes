@@ -9,12 +9,12 @@ export default function SelecaoAnuncios() {
   return (
     <div className="mt-20 mb-24">
       <h2 className="text-2xl font-semibold mb-6">Seleções de anúncios</h2>
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 justify-items-center">
         {ultimosProdutos.map((anuncio) => (
           <div
             key={anuncio.id}
             onClick={() => navigate("/produto", { state: anuncio })}
-            className="bg-[#F4F5F7] hover:shadow-lg transition-all w-[240px] h-[370px] cursor-pointer"
+            className="bg-[#F4F5F7] hover:scale-105 shadow-lg transition-all w-[240px] h-[370px] cursor-pointer"
           >
             <img
               src={anuncio.imagem}

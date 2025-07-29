@@ -44,7 +44,7 @@ export default function Header() {
             <Link
               key={link.path}
               to={link.path}
-              className={`block py-1 md:inline md:py-0 hover:text-red-500 transition duration-200  ${location.pathname === link.path ? 'font-semibold' : ''}`}
+              className={`block py-1 md:inline md:py-0 transition duration-200  ${location.pathname === link.path ? 'font-semibold' : ''}`}
                onClick={() => setMenuOpen(false)}
               style={location.pathname === link.path ? { color: corPrincipal } : {}}
             >
@@ -68,7 +68,7 @@ export default function Header() {
         <img
           src="https://i.pravatar.cc/32"
           alt="Usuário"
-          className="w-8 h-8 rounded-full border border-gray-300"
+          className="w-8 h-8 rounded-full border border-gray-300 transtion-1000 hover:scale-105 cursor-pointer"
         />
 
         <div className="relative flex items-center gap-2">
@@ -81,7 +81,7 @@ export default function Header() {
           </button>
 
           {regiao && (
-            <span className="text-sm font-medium capitalize" style={{ color: corPrincipal }}>
+            <span className="text-sm font-medium capitalize " style={{ color: corPrincipal }}>
               {regiao}
             </span>
           )}
