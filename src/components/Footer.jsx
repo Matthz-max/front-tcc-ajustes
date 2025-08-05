@@ -32,7 +32,7 @@ export default function Footer() {
               <Link to="/vendas">Achadinhos</Link>
             </li>
             <li className="hover:text-red-500 transition duration-200">
-              <Link to="/empregos">Corre certo</Link>
+              <Link to="/vagas">Corre certo</Link>
             </li>
             <li className="hover:text-red-500 transition duration-200">
               <Link to="/sobre">Sobre nós</Link>

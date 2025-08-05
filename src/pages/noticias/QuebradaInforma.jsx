@@ -98,8 +98,14 @@ export default function QuebradaInforma() {
         >
           <div className="absolute -top-3 left-0 flex h-3 w-full">
             <div className="w-3/6"></div>
-            <div className="w-3/6" style={{ backgroundColor: corPrincipal }}></div>
-            <div className="w-2/6" style={{ backgroundColor: corSecundaria }}></div>
+            <div
+              className="w-3/6"
+              style={{ backgroundColor: corPrincipal }}
+            ></div>
+            <div
+              className="w-2/6"
+              style={{ backgroundColor: corSecundaria }}
+            ></div>
           </div>
           <h2 className="text-2xl font-fraunces font-semibold mb-4">
             Área de Climatização
@@ -119,7 +125,7 @@ export default function QuebradaInforma() {
         </div>
 
         {/* Cards Clima */}
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-3 w-full lg:w-[60%] mt-10 ">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 w-full lg:w-[60%] mt-10">
           {Object.entries(zonasClima).map(([nome]) => {
             const clima = dados[nome];
             return (
@@ -163,7 +169,9 @@ export default function QuebradaInforma() {
       </div>
 
       {/* Notícias */}
-<h2 className="text-4xl font-semibold mb-10 w-max mx-auto text-center">Seleções de doações</h2>
+      <h2 className="text-4xl font-semibold mb-10 w-max mx-auto text-center">
+        Seleções de doações
+      </h2>
       <div className="space-y-6">
         {noticias.map((n) => (
           <Link to={`/noticia/${n.id}`} key={n.id} className="block px-20">

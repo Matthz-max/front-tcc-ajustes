@@ -17,19 +17,8 @@ export default function Login() {
     <div className="flex h-screen w-full font-poppins overflow-hidden">
       {/* Lado esquerdo: Formulário */}
       <div className="relative w-1/2 bg-white z-10 flex flex-col justify-center px-16">
-        <h2 className="text-3xl font-bold mb-6">Fazer Login</h2>
-
-        <button className="w-full flex items-center justify-center gap-3 border px-4 py-2 rounded-md mb-6">
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"
-            alt="Google"
-            className="w-5 h-5"
-          />
-          Entrar com Google
-        </button>
-
-        <p className="text-center text-gray-400 mb-6">- OU -</p>
-
+        <h2 className="text-3xl text-center font-bold mb-6">Fazer Login</h2>
+   
         <input
           type="email"
           placeholder="Nome de Usuário/Email"
@@ -44,7 +33,7 @@ export default function Login() {
           />
           <button
             type="button"
-            className="absolute right-3 top-3 text-gray-500 "
+            className="absolute right-3 top-3 text-gray-500 trasition-all duration-600"
             onClick={() => setShowPassword(!showPassword)}
           >
             {showPassword ? "🙈" : "👁️"}
@@ -56,7 +45,7 @@ export default function Login() {
         </button>
 
         <button
-         className="w-full bg-gray-100 border border-gray-300 text-gray-700 py-3 rounded-md mb-6 transition-all duration-300 hover:scale-105 hover:border-black cursor-pointer"
+          className="w-full bg-gray-100 border border-gray-300 text-gray-700 py-3 rounded-md mb-6 transition-all duration-300 hover:scale-105 hover:border-black cursor-pointer"
           onClick={entrarComoVisitante}
         >
           Entrar como visitante
@@ -89,7 +78,9 @@ export default function Login() {
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 flex flex-col justify-center items-center text-white text-center z-10 bg-black bg-opacity-40">
-          <h1 className="text-4xl font-bold text-orange-500 mb-2">BlogPeriferico</h1>
+          <h1 className="text-4xl font-bold text-orange-500 mb-2">
+            BlogPeriferico
+          </h1>
           <p className="text-lg">Bem-vindo ao blog periférico!</p>
           <h2 className="text-3xl font-bold mt-2">Login</h2>
         </div>

@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { FaSearch, FaMapMarkerAlt, FaBars } from 'react-icons/fa';
-import RegionSelector from './RegionSelector';
-import { useRegiao } from '../contexts/RegionContext';
-import { regionColors } from '../utils/regionColors';
+import React, { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { FaSearch, FaMapMarkerAlt, FaBars } from "react-icons/fa";
+import RegionSelector from "./RegionSelector";
+import { useRegiao } from "../contexts/RegionContext";
+import { regionColors } from "../utils/regionColors";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -16,7 +16,7 @@ export default function Header() {
     { path: "/quebrada-informa", label: "Quebrada Informa" },
     { path: "/doacoes", label: "Mão Amiga" },
     { path: "/achadinhos", label: "Achadinhos" },
-    { path: "/empregos", label: "Corre Certo" },
+    { path: "/vagas", label: "Corre Certo" },
   ];
 
   const corPrincipal = regionColors[regiao]?.[0] || "#1D4ED8"; // padrão azul
@@ -27,26 +27,45 @@ export default function Header() {
   };
 
   return (
-    <header className="w-full px-6 py-3 flex items-center justify-between shadow-md border-b-2 fixed top-0 left-0 z-50"
-      style={{ borderColor: corPrincipal, backgroundColor: "#ffffff" }}>
+    <header
+      className="w-full px-6 py-3 flex items-center justify-between shadow-md border-b-2 fixed top-0 left-0 z-50"
+      style={{ borderColor: corPrincipal, backgroundColor: "#ffffff" }}
+    >
       {/* Logo + Navegação */}
       <div className="flex items-center gap-4">
-        <Link to="/sobre" className="text-2xl font-bold" style={{ color: corPrincipal }}>
+        <Link
+          to="/sobre"
+          className="text-2xl font-bold"
+          style={{ color: corPrincipal }}
+        >
           BlogPeriferico
         </Link>
 
-        <button onClick={() => setMenuOpen(!menuOpen)} className="text-xl md:hidden ml-4">
+        <button
+          onClick={() => setMenuOpen(!menuOpen)}
+          className="text-xl md:hidden ml-4"
+        >
           <FaBars />
         </button>
 
-        <nav className={`${menuOpen ? ' block absolute bg-white top-16 left-0 w-full shadow-md p-4' : 'hidden'} md:flex gap-6 font-medium text-sm text-black md:static md:w-auto md:p-0`}>
-          {navLinks.map(link => (
+        <nav
+          className={`${
+            menuOpen
+              ? " block absolute bg-white top-16 left-0 w-full shadow-md p-4"
+              : "hidden"
+          } md:flex gap-6 font-medium text-sm text-black md:static md:w-auto md:p-0`}
+        >
+          {navLinks.map((link) => (
             <Link
               key={link.path}
               to={link.path}
-              className={`block py-1 md:inline md:py-0 transition duration-200  ${location.pathname === link.path ? 'font-semibold' : ''}`}
-               onClick={() => setMenuOpen(false)}
-              style={location.pathname === link.path ? { color: corPrincipal } : {}}
+              className={`block py-1 md:inline md:py-0 transition duration-200  ${
+                location.pathname === link.path ? "font-semibold" : ""
+              }`}
+              onClick={() => setMenuOpen(false)}
+              style={
+                location.pathname === link.path ? { color: corPrincipal } : {}
+              }
             >
               {link.label}
             </Link>
@@ -81,7 +100,10 @@ export default function Header() {
           </button>
 
           {regiao && (
-            <span className="text-sm font-medium capitalize " style={{ color: corPrincipal }}>
+            <span
+              className="text-sm font-medium capitalize "
+              style={{ color: corPrincipal }}
+            >
               {regiao}
             </span>
           )}
